@@ -1,11 +1,10 @@
 import menus
-
-def main():
+    
+if __name__ == "__main__":
     try:
         choice = int(input("Menu:\n1. Hide a message in an image\n2. Decode a message from an image\n3. Hide a file in an image\n4. Decode a file from an image\n5. Encrypt a text file\n6. Decrypt a text file\n7. Encrypt text\n8. Decrypt text: "))
         if choice not in [1, 2, 3, 4, 5, 6, 7, 8]:
             print("Invalid choice. Please enter a number from 1 to 8.")
-            return False
         if choice == 1:
             menus.hide_message_in_png_menu()
         elif choice == 2:
@@ -24,7 +23,3 @@ def main():
             menus.decrypt_text_menu()
     except ValueError:
         print("Invalid choice. Please enter a number from 1 to 8.")
-        return False
-        
-if __name__ == "__main__":
-    main()
